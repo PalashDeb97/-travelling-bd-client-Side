@@ -4,7 +4,7 @@ const BookingHistory = () => {
     const [historys, setHistorys] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/booking')
+        fetch('https://intense-tor-58005.herokuapp.com/booking')
             .then(res => res.json())
             .then(data => setHistorys(data))
     }, [] )
@@ -14,7 +14,7 @@ const BookingHistory = () => {
         const proceed = window.confirm('are you sure, you want to delete ?');
         if (proceed) {
 
-            const url = `http://localhost:5000/booking/${id}`;
+            const url = `https://intense-tor-58005.herokuapp.com/booking/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

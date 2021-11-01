@@ -11,7 +11,7 @@ const BookingNow = () => {
 
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/booking', data)
+        axios.post('https://intense-tor-58005.herokuapp.com/booking', data)
         .then(res => {
             console.log(res);
             if (res.data.insertedId) {
